@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
-import Classes from './Layout.css';
+import './Layout.css';
 import Aux from '../../HOCs/Aux'
 import Navigation from '../../Components/NavBar/Navigation';
 import ArticlePanel from '../../Components/Articles/ArticlePanel/ArticlePanel';
