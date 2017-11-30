@@ -1,0 +1,26 @@
+.ScrapeButton {
+  margin-top: 20px;
+  padding: 10px 15px 10px 15px;
+  background-color: #0f5837;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  border: 4px double #0f5837;
+  border-radius: 10px;
+  font-family: arial,helvetica,sans-serif;
+  color: #ffffff !important;
+}
+
+.ScrapeButton:hover {
+  background: transparent;
+  color: #0f5837 !important;
+}
+
+.ScrapeButton:focus {
+  outline:none;
+}
+.ScrapeButton:active {
+  position:relative;
+  outline:none;
+  top: 2px;
+}

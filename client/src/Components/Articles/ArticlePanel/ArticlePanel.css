@@ -1,0 +1,38 @@
+.Panel {
+  text-align: center;
+  display: inline-block;
+  width: 95%;
+  box-shadow: 1px 1px #666;
+  font-family: 'Quicksand', sans-serif;
+  padding: 0px !important;
+  background-color: #555;
+  color:white;
+  margin: 10px;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+.Panel:hover {
+  transition: transform 0.2s;
+  transform: scale3d(1.006, 1.006, 1);
+  cursor: pointer;
+}
+.Desc {
+  font-family: arial,helvetica,sans-serif;
+  color: black;
+}
+
+.ArticleImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.ArticleContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.p {
+  margin: 10px;
+}
