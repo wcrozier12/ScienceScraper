@@ -66,19 +66,25 @@ class Layout extends Component {
       commentOpen={this.commentClickHandler} />
     })
 
-    return (
-      <Aux>
+   
+     return (        
+        <Aux>
           <section>
             <Navigation onScrapeClick={this.scrapeClickHandler}/>
           </section>
             <Modal show={this.state.scraping} modalClosed={this.closeScrapeWindowHandler}>
               <ScrapeSummary scrapedArticlesLength={this.state.scrapedArticlesLength} scrapedArticles={this.state.scrapedArticles}/>
             </Modal>
+        {this.state.articles.length !== 0 ? 
           <div className="articleContainer">
             {articles}
-          </div>
+          </div> :
+          <div>
+            <img style={{height:'30%', width:'30%'}} src="https://www.svgrepo.com/show/18907/atom.svg" className="ld ld-flip"/>
+            <h1>Gathering articles.. </h1>
+          </div>}
       </Aux>
-    );
+     );
   }
 }
 

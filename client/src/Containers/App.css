@@ -2,4 +2,9 @@
   text-align: center;
   background: #ccc;
   font-family: 'Quicksand', sans-serif;
+  height:100%;
+}
+
+html, body, #root {
+  height: 100%;
 }
