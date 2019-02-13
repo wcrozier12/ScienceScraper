@@ -23,17 +23,19 @@ class Layout extends Component {
   }
 
   scrapeClickHandler = () => {
-    axios.get("/scrape").then(result => {
-      console.log(result);
-      // return axios.get("/api/articles").then(result => {
-      //   const numberOfScraped = result.data.length - this.state.articles.length;
-      //   const articles = result.data;
-      //   return this.setState({
-      //     scraping: true,
-      //     scrapedArticlesLength: numberOfScraped,
-      //     articles: articles
-      //   });
-      // });
+    this.setState({ scraping: true }, () => {
+      axios.get("/api/articles/scrape").then(result => {
+        return axios.get("/api/articles").then(result => {
+          const numberOfScraped =
+            result.data.length - this.state.articles.length;
+          const articles = result.data;
+          return this.setState({
+            scraping: false,
+            scrapedArticlesLength: numberOfScraped,
+            articles: articles
+          });
+        });
+      });
     });
   };
 

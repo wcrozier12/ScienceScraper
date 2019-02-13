@@ -16,7 +16,7 @@ class NewComment extends Component {
     const data = {
       content: this.state.content
     };
-    axios.post("/newComment/" + this.props.articleId, data).then(response => {
+    axios.post(`/api/comment/${this.props.articleId}`, data).then(response => {
       const newComment = response.data;
       const comments = [...this.state.comments, newComment];
       this.setState({ content: "", comments: comments });

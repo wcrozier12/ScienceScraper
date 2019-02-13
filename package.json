@@ -1,11 +1,30 @@
 {
-  "name": "ScienceScraper",
+  "name": "sciencescraper",
   "version": "1.0.0",
-  "description": "Science Scraper",
+  "description": "An article repository that scrapes a popular science news sites for up to date articles. Users can view an article summary, comment on an article, and visit the site to read the full article.  ## Getting Started",
   "main": "index.js",
-  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd api && node server.js",
+    "heroku-postbuild": "cd client && yarn --production=false && yarn run build",
+    "dev": "concurrently \"cd api && nodemon server.js\" \"cd client && npm run start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wcrozier12/ScienceScraper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wcrozier12/ScienceScraper/issues"
+  },
+  "homepage": "https://github.com/wcrozier12/ScienceScraper#readme",
   "dependencies": {
-    "axios": "^0.17.1",
+    "react": "^16.8.0",
+    "react-bootstrap": "^0.31.5",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.0.17",
+    "axios": "^0.18.0",
     "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
     "concurrently": "^3.5.1",
@@ -13,17 +32,5 @@
     "mongojs": "^2.4.1",
     "mongoose": "^4.13.5",
     "morgan": "^1.9.0"
-  },
-  "scripts": {
-    "start": "node server.js",
-    "heroku-postbuild": "cd client && yarn --production=false && yarn run build",
-    "dev": "concurrently \"nodemon server.js\" \"cd client && npm run start\""
-  },
-  "devDependencies": {
-    "eslint": "^5.13.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4"
   }
 }
