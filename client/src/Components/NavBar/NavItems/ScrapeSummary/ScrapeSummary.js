@@ -1,21 +1,24 @@
-import React from 'react';
-import Aux from '../../../../HOCs/Aux';
-import './ScrapeSummary.css';
+import React from "react";
+import Aux from "../../../../HOCs/Aux";
+import "./ScrapeSummary.css";
 
-const scrapeSummary = (props) => {
+const ScrapeSummary = props => {
   if (props.scrapedArticlesLength !== 0) {
     return (
-    <Aux>
-      <p className="ScrapeMessage">Added {props.scrapedArticlesLength} articles, enjoy!</p>
-    </Aux>
-    )
+      <Aux>
+        <p className="ScrapeMessage">
+          Added {props.scrapedArticlesLength} articles, enjoy!
+        </p>
+      </Aux>
+    );
+  } else {
+    return (
+      <Aux>
+        <p className="ScrapeMessage">
+          There are no new articles. Try back tomorrow.
+        </p>
+      </Aux>
+    );
   }
-  else {
-  return (
-    <Aux>
-      <p className="ScrapeMessage"> There are no new articles. Try back tomorrow. </p>
-    </Aux>
-  )
-  }
-}
-export default scrapeSummary;
+};
+export default ScrapeSummary;

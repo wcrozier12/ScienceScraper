@@ -17,6 +17,13 @@
   "scripts": {
     "start": "node server.js",
     "heroku-postbuild": "cd client && yarn --production=false && yarn run build",
-    "dev": "concurrently \"nodemon server.js\" \"npm run client\""
+    "dev": "concurrently \"nodemon server.js\" \"cd client && npm run start\""
+  },
+  "devDependencies": {
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4"
   }
 }
