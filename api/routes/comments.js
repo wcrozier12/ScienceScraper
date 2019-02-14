@@ -4,6 +4,7 @@ const db = require("../models");
 
 router.post("/comment/:id", async (req, res) => {
   try {
+    console.log(req.body)
     const comment = await db.comments.create(req.body);
 
     await db.articles.findOneAndUpdate(

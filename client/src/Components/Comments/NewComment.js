@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./NewComment.css";
-import Aux from "../../HOCs/Aux";
 import Comment from "./Comment";
 
 class NewComment extends Component {
@@ -37,7 +36,7 @@ class NewComment extends Component {
     }
 
     return (
-      <Aux>
+      <React.Fragment>
         {comments}
         <div className="row">
           <div className="col-md-12">
@@ -65,7 +64,7 @@ class NewComment extends Component {
             </button>
           </div>
         </div>
-      </Aux>
+      </React.Fragment>
     );
   }
 }

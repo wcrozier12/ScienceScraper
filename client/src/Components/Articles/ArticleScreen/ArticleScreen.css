@@ -1,6 +1,6 @@
 .ArticleContainer {
   max-height: 100%;
-  max-width:100%;
+  max-width: 100%;
 }
 
 .ScreenImage {
@@ -17,12 +17,12 @@
 
 .Link:hover {
   text-decoration: none;
-  color: inherit; 
+  color: inherit;
 }
 
 .Link:focus {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
   outline: none;
 }
 .ImageCol {
@@ -36,16 +36,16 @@
 }
 
 .Form {
-  text-align:left;
+  text-align: left;
 }
 .Input {
   border-radius: 5px;
   margin: 10px;
-  outline:none;
+  outline: none;
 }
 
 @media (max-width: 990px) {
-    .Image {
-      border-radius: 10px 10px 0 0;
-    }
+  .Image {
+    border-radius: 10px 10px 0 0;
+  }
 }
