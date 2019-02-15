@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd api && node server.js",
-    "heroku-postbuild": "cd client && yarn --production=false && yarn run build",
+    "heroku-postbuild": "cd client && npm --production=false && npm run build",
     "dev": "concurrently \"cd api && nodemon server.js\" \"cd client && npm run start\""
   },
   "repository": {
