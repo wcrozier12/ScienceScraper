@@ -21,9 +21,9 @@ app.use(
     type: "application/vnd.api+json"
   })
 );
-app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "../client/build")));
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
     "Access-Control-Allow-Methods",
@@ -44,6 +44,6 @@ app.use("/api", routes.commentRoutes);
 app.use("/api", routes.articleRoutes);
 
 // Listen on port 3001
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log("App running on port " + PORT);
 });
