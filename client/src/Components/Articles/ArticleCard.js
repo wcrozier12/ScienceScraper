@@ -6,7 +6,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import CardContent from "@material-ui/core/CardContent";
 import Modal from "@material-ui/core/Modal";
-import ArticleModal from "./ArticleScreen/ArticleModal";
+import ArticleModal from "./Modal";
 
 const styles = {
   card: {
@@ -35,7 +35,7 @@ const ArticleCard = props => {
         >
           <CardMedia className={classes.media} image={photo} title={title} />
           <CardContent>
-            <Typography variant="h5">{title}</Typography>
+            <Typography variant="h4">{title}</Typography>
           </CardContent>
         </CardActionArea>
       </Card>

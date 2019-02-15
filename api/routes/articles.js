@@ -4,14 +4,14 @@ const axios = require("axios");
 const scrapeArticles = require("../lib/scrapeArticles");
 const db = require("../models");
 
-router.get("/articles", async function(req, res) {
+router.get("/articles", async function (req, res) {
   const url = "https://www.sciencenews.org";
   try {
     const { data } = await axios.get(url);
     const scrapedArticles = scrapeArticles(data, url);
     const currentArticles = await db.articles
       .find({})
-      .populate("comments")
+      .populate({ path: 'comments', options: { sort: { '_id': -1 } } })
       .sort({ _id: 1 });
     const currentTitles = currentArticles.map(e => e.get("title"));
     const titlesToInsert = scrapedArticles.filter(
