@@ -10,7 +10,6 @@ import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import List from '@material-ui/core/List'
 import CircularProgress from '@material-ui/core/CircularProgress';
-import NewComment from "../Comments/NewComment";
 import Comment from '../Comments/Comment'
 const styles = {
   paper: {
