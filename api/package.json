@@ -1,0 +1,29 @@
+{
+  "name": "ScienceScraper",
+  "version": "1.0.0",
+  "description": "Science Scraper",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "concurrently": "^3.5.1",
+    "express": "^4.16.2",
+    "mongojs": "^2.4.1",
+    "mongoose": "^4.13.5",
+    "morgan": "^1.9.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && yarn --production=false && yarn run build",
+    "dev": "concurrently \"nodemon server.js\" \"cd ../client && npm run start\""
+  },
+  "devDependencies": {
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4"
+  }
+}
